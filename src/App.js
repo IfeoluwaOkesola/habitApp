@@ -7,16 +7,18 @@ import Signup from './pages/Signup';
 
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path='/in' element={<MainLayout />}>
+    <div className='w-full h-full'>
+      <Router>
+        <Routes>
+          <Route path='/in' element={<MainLayout />}>
 
-        </Route>
-        <Route path='/' element={<LandingPage />} />
-        <Route path='/signin' element={<Signin />} />
-        <Route path='/signup' element={<Signup />} />
-      </Routes>
-    </Router>
+          </Route>
+          <Route path='/' element={<LandingPage />} />
+          <Route path='/signin' element={<Signin />} />
+          <Route path='/signup' element={<Signup />} />
+        </Routes>
+      </Router>
+    </div>
   );
 }
 
