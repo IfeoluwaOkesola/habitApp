@@ -53,13 +53,14 @@ const Signup = () => {
                                 <BsEye />
                             </div>
                         </div>
+                        <Link to='/in'>Main</Link>
                         <button type='submit' className='bg-primary w-full text-white p-3 rounded-lg'>Create Account</button>
-                        <p className='text-center mt-2'>Already a member?<span className='text-primary'><Link to='signin'>Sign in</Link></span></p>
+                        <p className='text-center mt-2'>Already a member?<span className='text-primary'><Link to='/signin'>Sign in</Link></span></p>
                     </form>
                 </div>
             </div>
         </div>
-    )
+    );
 }
 
 export default Signup;

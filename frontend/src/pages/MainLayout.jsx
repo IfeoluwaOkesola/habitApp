@@ -1,7 +1,15 @@
+import Nav from "../components/mainlayout/Nav";
+import Sidebar from "../components/mainlayout/Sidebar";
+import { Outlet } from "react-router-dom";
+
 const MainLayout = () => {
     return (
-        <div>
-            <h1>Main Layout</h1>
+        <div className="w-full">
+            <Nav />
+            <div className="flex w-full">
+                <Sidebar />
+                <Outlet />
+            </div>
         </div>
     )
 }
