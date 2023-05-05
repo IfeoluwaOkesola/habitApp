@@ -1,6 +1,6 @@
 const Dashboard = () => {
     return (
-        <div>
+        <div className="mt-[100px]">
             <h1>Dashboard</h1>
         </div>
     )
