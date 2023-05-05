@@ -53,9 +53,9 @@ const loginUser = async (req, res) => {
         if (valid) {
           const token = createToken({ userId: result._id });
           res.cookie('habitual', token, {
-            // httpOnly: false,
-            // sameSite: 'None',
-            // secure: true,
+            httpOnly: false,
+            sameSite: 'None',
+            secure: true,
             maxAge: maxAge * 1000,
           });
           res.status(200).json({ user: result._id});
