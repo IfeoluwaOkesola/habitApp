@@ -22,6 +22,10 @@ const handleErrors = (err) => {
 //     errors.signUp = 'user not created';
 //    }
   
+// sign-up error
+if(err.message ==='user already exists'){
+  errors.signUp = 'user already exist';
+}
     // Incorrect password for login
     if (err.message === 'incorrect password') {
       errors.password = 'That password is incorrect';
