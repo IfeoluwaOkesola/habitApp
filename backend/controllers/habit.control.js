@@ -1,9 +1,10 @@
+
 const { createHabitService } = require('../service/habit.service');
 
 const createHabit = async (req, res) => {
   const { habitCategory, habitName } = req.body;
+  const userId = req.user;
   
-  const userId = req.user.id; // complete the error here
   try {
     if (habitCategory && habitName) {
       const result = await createHabitService({

@@ -1,6 +1,7 @@
 const jwt = require('jsonwebtoken');
 const dotenv = require('dotenv');
-const { loginUser } = require('../controllers/user.control');
+const { handleErrors } = require('../utils/error.handler');
+
 
 
 dotenv.config();
@@ -8,7 +9,7 @@ dotenv.config();
 const secret = process.env.SECRET;
 
 const requireAuth = (req, res, next) => {
-  const token = req.cookies.habitual; // handle the error here
+  const token = req.cookies.habitual; 
 
   // check json web token exists & is verified
 
@@ -17,10 +18,9 @@ const requireAuth = (req, res, next) => {
       if (err) {
         console.log(err.message);
         const errors = handleErrors(err);
-        res.status(400).json({ errors, message: 'user not loggrd in' });
+        res.status(400).json({ errors, message: 'user not logged in' });
       } else {
-        console.log(decodedToken);
-        req.user = { id: decodedToken.userId };
+        req.user = decodedToken.id.userId
         next();
       }
     });

@@ -7,7 +7,7 @@ const routeManager = express.Router();
 
 routeManager.post('/auth/register', registerUser );
 routeManager.post('/auth/login', loginUser );
-routeManager.post('/createHabit', requireAuth, createHabit) // handle the middleware issue
+routeManager.post('/createHabit', requireAuth, createHabit)
 
 
 

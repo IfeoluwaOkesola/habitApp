@@ -53,10 +53,10 @@ const loginUser = async (req, res) => {
         if (valid) {
           const token = createToken({ userId: result._id });
           res.cookie('habitual', token, {
-            httpOnly: true,
-            sameSite: 'None',
-            secure: true,
-            maxAge: maxAge * 1000,
+            // httpOnly: true,
+            // sameSite: 'None',
+            // secure: true,
+            // maxAge: maxAge * 1000,
           });
           res.status(200).json({ user: result._id});
         } else {

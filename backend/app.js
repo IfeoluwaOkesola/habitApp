@@ -15,9 +15,9 @@ app.use(
   })
 );
 app.use(express.json());
-
-app.use('/', routeManager);
 app.use(cookieParser())
+app.use('/', routeManager);
+
 
 
 app.use(express.urlencoded({ extended: false }));
