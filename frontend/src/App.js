@@ -13,11 +13,11 @@ function App() {
     <div>
       <Router>
         <Routes>
-          <Route path='/in' element={<MainLayout />}>
-            <Route path="/in/dashboard" element={<Dashboard />} />
-            <Route path="/in/profile" element={<Profile />} />
-            <Route path="/in/community" element={<Community />} />
-            <Route path="/in/habits" element={<Habits />} />
+          <Route path='in' element={<MainLayout />}>
+            <Route index element={<Dashboard />} />
+            <Route path="profile" element={<Profile />} />
+            <Route path="community" element={<Community />} />
+            <Route path="habits" element={<Habits />} />
           </Route>
           <Route path='/' element={<LandingPage />} />
           <Route path='/signin' element={<Signin />} />
