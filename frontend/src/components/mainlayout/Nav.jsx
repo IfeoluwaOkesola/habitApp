@@ -19,7 +19,9 @@ const Nav = () => {
                     </div>
                     <div className='flex items-center gap-x-3 rounded-lg bg-white h-fit p-2 w-[35%]'>
                         <FiSearch />
-                        <input type="text" placeholder="Search sugested habits" className='focus:outline-none' />
+                        <form onSubmit={(e) => e.preventDefault()}>
+                            <input type="text" placeholder="Search sugested habits" className='focus:outline-none' />
+                        </form>
                     </div>
                         <div className='flex items-center gap-x-3'>
                             <div className='bg-white rounded-full p-2'>

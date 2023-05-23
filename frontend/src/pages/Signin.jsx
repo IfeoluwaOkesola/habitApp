@@ -7,6 +7,9 @@ import { FaFacebookF } from  'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 const Signin = () => {
+
+    
+
     return (
         <div className="flex w-full h-full">
             <div className="bg-primary w-1/2 h-full hidden md:block">
